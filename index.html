@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sorting Visualizer</title>
+</head>
+<body>
+    <section class="container">
+        <header class="header">
+            <nav>
+                <ul class="options_list">
+                    <li class="option_list_item">
+                        <div>
+                            <input checked type="radio" class="input" name="algo" id="mergeSort">
+                            <lable class="cradio" for="mergeSort"></lable>
+                            <label for="mergeSort" class="lable_name">Merge Sort</label>
+                        </div>
+                    </li>
+                    <li class="option_list_item">
+                        <div>
+                            <input type="radio" class="input" name="algo" id="insertionSort">
+                            <lable class="cradio" for="insertionSort"></lable>
+                            <label for="insertionSort" class="lable_name">Insertion Sort</label>
+                        </div>
+                    </li>
+                    <li class="option_list_item">
+                        <div>
+                            <input type="radio" class="input" name="algo" id="heapSort">
+                            <lable class="cradio" for="heapSort"></lable>
+                            <label for="heapSort" class="lable_name">Heap Sort</label>
+                        </div>
+                    </li>
+                    <li class="option_list_item">
+                        <div>
+                            <input type="radio" class="input" name="algo" id="quickSort">
+                            <lable class="cradio" for="quickSort"></lable>
+                            <label for="quickSort" class="lable_name">Quick Sort</label>
+                        </div>
+                    </li>
+                    <li class="option_list_item">
+                        <div>
+                            <input type="radio" class="input" name="algo" id="bubbleSort">
+                            <lable class="cradio" for="bubbleSort"></lable>
+                            <label for="bubbleSort" class="lable_name">Bubble Sort</label>
+                        </div>
+                    </li>
+                    <li class="option_list_item">
+                        <button class="viz-btn viz">Visualize!</button>
+                    </li>
+                    <li class="option_list_item">
+                        <button class="viz-btn rst">Reset Data</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- <ul class="list">
+            <li data-data="23" class="list-item"></li>
+        </ul> -->
+    </section>
+<script src="./app.js"></script>
+</body>
+</html>
