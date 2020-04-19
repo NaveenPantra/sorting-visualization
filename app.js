@@ -120,30 +120,27 @@ let currentComparing = [arr.length- 1, arr.length - 2];
 async function bubbleSort() {
     for (let i = 0 ; i < arr.length -1; i++) {
         for (let j = arr.length - 1; j > i; j--) {
-            setTimeout((j, step) => {
-                LIST_ITEMS = getListItemsAll();
-                currentComparing = [j , j - 1];
-                setCurrentItems(j, j - 1);
-                setTimeout(() => {
-                    if (arr[j] < arr[j - 1]) {
-                        setCurrentComparingItems(j, j - 1);
-                        setTimeout(() => {
-                            const temp = arr[j];
-                            arr[j] = arr[j - 1];
-                            arr[j - 1] = temp;
-                            removeList();
-                            generateList();
-                            DOMElements = getDOMElements();
-                            // cleanItems(j, j - 1);
-                        }, 5);
-                    } else {
-                        cleanItems(j, j - 1);
-                    }        
-                }, 5)
-            }, 20 * elementCounter, j, step);
-            elementCounter += step;
+            setCurrentItems(j, j - 1);
+            await fakeAsync();
+            if (arr[j] < arr[j - 1]) {
+                setCurrentComparingItems(j, j - 1);
+                await fakeAsync();
+                const temp = arr[j];
+                arr[j] = arr[j - 1];
+                arr[j - 1] = temp;
+                await fakeAsync();
+            }
+            cleanItems(i, j);
+            removeList();
+            generateList();
+            DOMElements = getDOMElements();
+            LIST_ITEMS = getListItemsAll();
         }
     }
+    removeList();
+    generateList();
+    DOMElements = getDOMElements();
+    LIST_ITEMS = getListItemsAll();
     return Promise.resolve();
 }
 
@@ -347,7 +344,7 @@ async function merge(p, q, r) {
 
 async function fakeAsync() {
     return new Promise(res => {
-        setTimeout(res, 10);
+        setTimeout(res, 1);
     });
 }
 

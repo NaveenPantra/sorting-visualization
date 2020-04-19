@@ -176,8 +176,16 @@ nav {
     background: transparent;
 }
 
+.option_list_item div {
+    position: relative;
+}
+
 .input {
-    display: none;
+    z-index: 123455;
+    position: absolute;
+    transform: translate(2px, 5px) scale(1.4);
+    opacity: 0;
+    cursor: pointer;
 }
 
 .input[type="radio"]:checked + .cradio:after {
