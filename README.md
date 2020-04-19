@@ -1,4 +1,4 @@
-# sorting-visualization
+# sorting-visualization https://sorting-vis.netlify.app/
 This Project demonstrates various sorting algorithms through visualizations.
 
 ### Algorithms
