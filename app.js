@@ -344,7 +344,7 @@ async function merge(p, q, r) {
 
 async function fakeAsync() {
     return new Promise(res => {
-        setTimeout(res, 1);
+        setTimeout(res, 10);
     });
 }
 
