@@ -83,6 +83,7 @@ label {
 
 .container {
     width: 95vw;
+    max-width: 1621px;
     margin: 3vh auto 0;
     box-shadow: var(--shadow-dark);
     border-radius: 3px;
