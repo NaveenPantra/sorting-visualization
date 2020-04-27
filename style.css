@@ -43,11 +43,6 @@ body {
     min-height: 100vh;
     line-height: 1.4;
     color: var(--color-text);
-    background-image: linear-gradient(
-      to right bottom,
-      var(--color-grey-light-2),
-      var(--color-grey-light-4)
-    );
 }
   
 ul,
